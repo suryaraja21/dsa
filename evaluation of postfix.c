@@ -1,6 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
-#define size 20
 void eval();
 void push(int);
 int pop();
