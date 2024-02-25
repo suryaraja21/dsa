@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-char revinfix[20];
+
 void post();
 void push(int);
 char pop();
