@@ -1,6 +1,6 @@
 
 #include<stdio.h>
-#include<conio.h>
+
 void post();
 void push(int);
 char pop();
