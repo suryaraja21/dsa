@@ -136,7 +136,6 @@ void add_p1_p2()
 }
 
 void display_p3(){
-    printf("check");
     temp3=head3;
     while(temp3!=NULL){
         printf("%dx^%d  ",temp3->coeff,temp3->pow);
