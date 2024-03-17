@@ -7,7 +7,38 @@ struct node{
     int data;
     struct node *next;
 };
-struct node *nw,*top,*temp;
+struct node *top=0,*nw,*temp;
+
+void push(){
+    int data;
+    printf("Enter the data: ");
+    scanf("%d",&data);
+    nw=((struct node *)malloc(sizeof(struct node)));
+    nw->data=data;
+    nw->next=top;
+    top=nw;
+}
+void display(){
+    temp=top;
+    if(top==NULL)
+    printf("Stack is empty!;");
+    else{
+        while(temp!=NULL){
+            printf("%d ",temp->data);
+            temp=temp->next;
+        }
+    }
+}
+
+
+void pop(){
+    temp=top;
+    if(top==NULL)
+    printf("Stack is empty!");
+    else{
+         top=top->next;
+    }
+}
 
 main(){
     int choice;
@@ -31,33 +62,5 @@ main(){
         }
     }while(choice<=3);
 }
+    
 
-void push(){
-    int item;
-    printf("\nEnter the item: ");
-    scanf("%d",&item);
-    if(top->data==0){
-        top->data=item;
-    }else{
-        nw=((struct node *)malloc(sizeof(struct node)));
-        nw->data=item;
-        nw->next=top;
-        top=nw;
-    }
-}
-
-void pop(){
-    if(top->data==0){
-        printf("\nUnderflow\n");
-    }else{
-        top=top->next;
-    }
-}
-
-void display(){
-    temp=top;
-    while(temp!=NULL){
-        printf("%d ",temp->data);
-        temp=temp->next;
-    }
-}
